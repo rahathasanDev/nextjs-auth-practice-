@@ -1,7 +1,9 @@
 "use server";
 
+import { UserData } from "@/app/register/page";
 
-export const registerUser = async(data) =>{
+
+export const registerUser = async(data:UserData) =>{
   const  res = await fetch(`${process.env.BACKEND_URL}/register`,{
     method:'POST',
     headers:{
